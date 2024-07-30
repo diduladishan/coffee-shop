@@ -1,0 +1,15 @@
+.section-four-background {
+  background-image: url("../../assets/images/SectionFour/branch.png");
+  background-size: cover;
+  background-position-x: -25vw;
+  background-position-y: -5vh;
+}
+
+[data-aos="rotate-coffee-cup"] {
+  transform: rotate(0deg);
+  transition-property: transform;
+
+  &.aos-animate {
+    transform: rotate(-180deg);
+  }
+}
