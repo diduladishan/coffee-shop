@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-import CarouselCard from "../HeroSection/CarouselCard";
+import CarouselCard from "./CarouselCard";
 import cappucino from "../../assets/images/HeroSection/cappuccino.png";
 import americano from "../../assets/images/HeroSection/americano.png";
 import "slick-carousel/slick/slick.css";
@@ -69,7 +69,7 @@ const Carousel = ({ visible }) => {
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 3,
     autoplay: false,
     speed: 4000,
     autoplaySpeed: 4000,
@@ -77,17 +77,25 @@ const Carousel = ({ visible }) => {
     arrows: false,
     pauseOnHover: true,
     responsive: [
+      // {
+      //   breakpoint: 1280,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //   },
+      // },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
   };
 
   return (
-    <div className={`-translate-x-[100vw] ${visible && "slide-in"}`}>
+    <div className={`2xl:-translate-x-[100vw] ${visible && "slide-in"}`}>
       <Slider {...settings}>
         {data.map(({ image, title, text, price }, index) => (
           <CarouselCard
